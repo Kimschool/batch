@@ -2,10 +2,7 @@ package com.example.SpringBatchTutorial.core.domain.mail;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -15,12 +12,14 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "mailhistory")
 public class MailHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "date", insertable = false, updatable = false)
     private LocalDate date;
 
     private String result;

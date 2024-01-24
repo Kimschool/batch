@@ -23,7 +23,7 @@ public class MailingScheduler {
     @Autowired
     private JobLauncher jobLauncher;
 
-    @Scheduled(cron = "5 * * * * *")
+    @Scheduled(fixedRate = 5000)
     public void mailSenderJobRun() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
 
         JobParameters jobParameters = new JobParameters(

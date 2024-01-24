@@ -113,8 +113,8 @@ public class TrMigrationConfig {
                 .name("trOrdersReader")
                 .repository(ordersRepository)
                 .methodName("findAll")
-                .pageSize(5)
-                .arguments(Arrays.asList())
+//                .pageSize(5)
+//                .arguments(Arrays.asList())
                 .sorts(Collections.singletonMap("id", Sort.Direction.ASC))
                 .build();
     }
