@@ -15,10 +15,10 @@ spring:
     jdbc:
       initialize-schema: ALWAYS
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/spring_batch
+    url: jdbc:mysql://localhost:3306/board
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: password1234
+    password:
   jpa:
     show-sql: true
 

@@ -23,7 +23,7 @@ public class SampleScheduler {
     @Autowired
     private JobLauncher jobLauncher;
 
-    @Scheduled(cron = "0 */1 * * * *")
+    @Scheduled(cron = "0 * */1 * * *")
     public void helloWorldJobRun() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
 
         JobParameters jobParameters = new JobParameters(
